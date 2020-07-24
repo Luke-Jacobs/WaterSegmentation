@@ -1,0 +1,23 @@
+PUDDLE_1 = ((433, 245), 'Puddle 1')
+PUDDLE_2 = ((262, 182), 'Puddle 2')
+MOTION_1 = ((537, 86), 'Motion 1')
+MOTION_2 = ((75, 58), 'Motion 2')
+NO_MOTION = ((354, 182), 'No motion')
+
+PIX_PUDDLES = [(457, 269), (141, 202), (310, 215), (460, 326)]
+PIX_MOTION = [(579, 94), (176, 33), (123, 35), (165, 110), (107, 106), (83, 47), (109, 8), (579, 91)]
+
+        # results = TrainingSequence._process_frames(frames)
+
+        # processes = [Process(target=TrainingSequence._process_frames, args=(frames_to_process,)) for i in range(N_PROCESSES)]
+        # for i in range(N_PROCESSES):
+        #     processes[i].start()
+        #     processes[i].run()
+        # for i in range(N_PROCESSES):
+        #     processes[i].join()
+
+        # with Pool(processes=N_PROCESSES) as pool:
+        #     results = [pool.apply_async(TrainingSequence._process_frames, (frames_to_process[i],))
+        #                for i in range(N_PROCESSES)]
+        #     pool.close()
+        #     pool.join()
