@@ -1,4 +1,4 @@
-# WATER SEGMENTATION
+# Water Segmentation for IoT insights
 
 ### Water and Our Environment
 
