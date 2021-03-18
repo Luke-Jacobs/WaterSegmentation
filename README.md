@@ -2,7 +2,7 @@
 
 ### Water and Our Environment
 
-It goes without saying that water is an important part of our environment. Water supports entire ecosystems of animals and is essential to human life. It is one of the most powerful driving forces of nature. But — as anyone who has fought a losing battling against flooding will tell you — it can also be a destructive force. Hurricanes and urban flooding can pose serious hazards to the people who live in harm’s way.1 Fortunately, however, we can utilize the power of edge computing to gather insights into the behavior of water to minimize its destruction. The Sage infrastructure will be able to equip hydrologists with the ability to study water in high-risk areas in real time.
+It goes without saying that water is an important part of our environment. Water supports entire ecosystems of animals and is essential to human life. It is one of the most powerful driving forces of nature. But — as anyone who has fought a losing battle against flooding will tell you — it can also be a destructive force. Hurricanes and urban flooding can pose serious hazards to the people who live in harm’s way.1 Fortunately, however, we can utilize the power of edge computing to gather insights into the behavior of water to minimize its destruction. The Sage infrastructure will be able to equip hydrologists with the ability to study water in high-risk areas in real time.
 
 My name is Luke Jacobs and I am a rising sophmore at the University of Illinois at Urbana-Champaign. My work within Sage has been researching water segmentation with computer vision and machine learning. The end goal of my work is to develop a general-purpose water segmentation tool that will allow Sage nodes to “see” water in their surroundings. Once this algorithm can be deployed onto Sage nodes, domain scientists like hydrologists will be able to gather hourly data on the level of water present in any environment containing a node. This software will be able to provide them with time-series and location-based data on issues like urban flooding to allow them to better understand how water affects our environment.
 
@@ -59,6 +59,8 @@ Water can be a destructive force, but edge computing will make it possible to mo
 Thanks for reading!
 
 ### References
+
+(This description is taken from https://sagecontinuum.org/science/water-segmentation/, the blog of the Sage Project.)
 
 1. On average, 1.9 significant flood or torrential rain events occur each year, and $362 million of losses to insured property are incurred each year from such events. (FEMA, https://www.ncbi.nlm.nih.gov/books/NBK541178/)
 2. Quote found at http://news.mit.edu/1996/visualprocessing
