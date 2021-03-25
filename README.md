@@ -2,7 +2,7 @@
 
 ### Water and Our Environment
 
-It goes without saying that water is an important part of our environment. Water supports entire ecosystems of animals and is essential to human life. It is one of the most powerful driving forces of nature. But — as anyone who has fought a losing battle against flooding will tell you — it can also be a destructive force. Hurricanes and urban flooding can pose serious hazards to the people who live in harm’s way.1 Fortunately, however, we can utilize the power of edge computing to gather insights into the behavior of water to minimize its destruction. The Sage infrastructure will be able to equip hydrologists with the ability to study water in high-risk areas in real time.
+It goes without saying that water is an important part of our environment. Water supports entire ecosystems of animals and is essential to human life. It is one of the most powerful driving forces of nature. But — as anyone who has fought a losing battle against flooding will tell you — it can also be a destructive force. Hurricanes and urban flooding can pose serious hazards to the people who live in harm’s way.[1] Fortunately, however, we can utilize the power of edge computing to gather insights into the behavior of water to minimize its destruction. The Sage infrastructure will be able to equip hydrologists with the ability to study water in high-risk areas in real time.
 
 My name is Luke Jacobs and I am a rising sophmore at the University of Illinois at Urbana-Champaign. My work within Sage has been researching water segmentation with computer vision and machine learning. The end goal of my work is to develop a general-purpose water segmentation tool that will allow Sage nodes to “see” water in their surroundings. Once this algorithm can be deployed onto Sage nodes, domain scientists like hydrologists will be able to gather hourly data on the level of water present in any environment containing a node. This software will be able to provide them with time-series and location-based data on issues like urban flooding to allow them to better understand how water affects our environment.
 
@@ -10,13 +10,13 @@ My name is Luke Jacobs and I am a rising sophmore at the University of Illinois 
 
 ![img](http://sagecontinuum.org/wp-content/uploads/2020/08/ballfield_view_cropped.jpg)An image taken from a Sage node in Chicago
 
-When you look at the above picture, it takes almost no time at all for you to notice the regions of standing water on this field. That’s the way it should be, since “half of the human brain is devoted directly or indirectly to vision,” explains Professor Mriganka Sur of MIT’s Department of Brain and Cognitive Sciences.2 A task like identifying water is absolutely trivial to us, but to a computer which has no native understanding of 3-dimensional space, teaching it to “see” is a very challenging task. In fact, the above image is one of the hardest for computers to segment (or outline), since it requires an understanding of context, lighting, texture, and color cues all working together.
+When you look at the above picture, it takes almost no time at all for you to notice the regions of standing water on this field. That’s the way it should be, since “half of the human brain is devoted directly or indirectly to vision,” explains Professor Mriganka Sur of MIT’s Department of Brain and Cognitive Sciences.[2] A task like identifying water is absolutely trivial to us, but to a computer which has no native understanding of 3-dimensional space, teaching it to “see” is a very challenging task. In fact, the above image is one of the hardest for computers to segment (or outline), since it requires an understanding of context, lighting, texture, and color cues all working together.
 
 As humans, we draw on numerous visual cues to identify water. In my research, I programmed classifiers for three cues which, when combined, can help computers distinguish between regions of water and other scenery. These cues are color, texture, and motion.
 
 ### Color
 
-For color identification I researched the use of Gaussian Mixture Models.3 This classifier was able to, for each pixel in a given image, output a probability value that that pixel was a water pixel. This initial classifier was a naive but efficient method for filtering out areas in an image that the computer was certain could not contain water. Take the following images, for example:
+For color identification I researched the use of Gaussian Mixture Models.[3] This classifier was able to, for each pixel in a given image, output a probability value that that pixel was a water pixel. This initial classifier was a naive but efficient method for filtering out areas in an image that the computer was certain could not contain water. Take the following images, for example:
 
 ![img](http://sagecontinuum.org/wp-content/uploads/2020/08/gaussian_model_for_hg_visualization_small.png)Two example images and their segmentation outputs (original images taken from the Video Water Database by Mettes, et al. 2015)
 
@@ -38,7 +38,7 @@ The black-and-white boxy-looking images represent the predictions of the texture
 
 ### Motion
 
-Color and texture are helpful visual cues of water, but what really sets water apart from other scenery is the way it moves. The motion classifier, proposed by the paper “Water detection through spatio-temporal invariant descriptors,” is the most sophisticated method for water segmentation that I researched. It involves multiple preprocessing steps, which, although relatively computationally expensive, yield impressive segmentation results:
+Color and texture are helpful visual cues of water, but what really sets water apart from other scenery is the way it moves. The motion classifier, proposed by the paper “Water detection through spatio-temporal invariant descriptors,”[4] is the most sophisticated method for water segmentation that I researched. It involves multiple preprocessing steps, which, although relatively computationally expensive, yield impressive segmentation results:
 
 ![img](http://sagecontinuum.org/wp-content/uploads/2020/08/tt_results_compiled-1024x253.png)Original images and segmentation masks (original images taken from the Video Water Database by Mettes, et al. 2015)
 
@@ -46,7 +46,7 @@ The motion classifier can draw clear divisions between rivers and their boundari
 
 The motion classifier works by first dividing a set of ~60 grayscale frames into many video “patches.” Each video patch represents a 3 pixel by 3 pixel space in the video. After the video is broken up into patches, the spatial mean of the grayscale intensity of each patch is computed over the dimension of time. This yields a large number of signals which can then be fed into a discrete fourier transform, the output of which is finally fed into a Random Forest classifier.
 
-![img](http://sagecontinuum.org/wp-content/uploads/2020/08/motion_classifier_diagram-1024x689.png)
+![img](http://sagecontinuum.org/wp-content/uploads/2020/08/motion_classifier_diagram-102x689.png)
 
 The purpose of these preprocessing steps is to allow the Random Forest to perceive the specific motion of small regions of a video. It is able to automatically learn the unique visual frequency bands that characterize the ripples and waves in water, allowing it to identify water with only just a second or two of video footage.
 
