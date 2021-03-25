@@ -46,7 +46,7 @@ The motion classifier can draw clear divisions between rivers and their boundari
 
 The motion classifier works by first dividing a set of ~60 grayscale frames into many video “patches.” Each video patch represents a 3 pixel by 3 pixel space in the video. After the video is broken up into patches, the spatial mean of the grayscale intensity of each patch is computed over the dimension of time. This yields a large number of signals which can then be fed into a discrete fourier transform, the output of which is finally fed into a Random Forest classifier.
 
-![img](http://sagecontinuum.org/wp-content/uploads/2020/08/motion_classifier_diagram-102x689.png)
+![img](https://sagecontinuum.org/wp-content/uploads/2020/08/motion_classifier_diagram.png)
 
 The purpose of these preprocessing steps is to allow the Random Forest to perceive the specific motion of small regions of a video. It is able to automatically learn the unique visual frequency bands that characterize the ripples and waves in water, allowing it to identify water with only just a second or two of video footage.
 
